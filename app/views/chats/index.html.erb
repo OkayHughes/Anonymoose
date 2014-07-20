@@ -4,7 +4,7 @@
 <div class="centered"> <strong>Your Chats:</strong></div>
 <div class="separator-wide separator-increased-margins"></div>
 <% @chats.each do |c| %>
-	<%= link_to(chat_path(c.id), remote: true) do %>
+	<%= link_to(chat_path(c.id), remote: true, class:"dark-link") do %>
 	<div class="chat-link">
 	<div class="chat-list-heading">
 	Members:

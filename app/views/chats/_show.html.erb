@@ -1,7 +1,7 @@
 
 <strong>
 <% @chat.users.each do |u| %>
-	<%= u.name << ", " %>
+	<%= link_to(u.name, user_path(u.name), remote: true, class:"dark-link") << ", " %>
 <% end %>
 </strong>
 <div id="messages-container">
@@ -9,6 +9,7 @@
 <div id="messages">
 <%= render partial: "messages", locals: {chat: @chat} %>
 </div>
+
 <%= form_for(@message, remote: true, class:"form") do |f| %>
 
 <%= f.text_field :content, class:"form-control inline", id: "message-field" %>
