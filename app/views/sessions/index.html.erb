@@ -1,0 +1,16 @@
+<p id="notice"> <%= notice %> </p>
+<h1> Sign In </h1>
+<%= form_for(:session, url: sessions_path) do |f| %>
+	<div class="form-group">
+		<%= f.text_field :email, placeholder: "Email Address", class: "form-control" %>	
+	</div>
+	<div class="form-group">
+		<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.submit "Sign in", class: "btn btn-danger pull-right" %>
+	</div>
+<% end %>
+
+<%= button_to "New User?", new_user_path, method: 'get', class: "btn btn-default" %>
+<end>

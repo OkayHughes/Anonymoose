@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MaxProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">
+<div class="navbar-content">
+
+<div class="title ">
+Anonymoose
+</div>
+
+<div id="links">
+<% if signed_in? %>
+
+<div class="glyphicon glyphicon-pencil"> </div>
+<%= link_to "New Chat", new_chat_path, remote: true, class: "menu"%>
+
+<div class="glyphicon glyphicon-list"> </div>
+<%= link_to "Chats", chats_path, class: "menu"%>
+
+<div class="glyphicon glyphicon-user"> </div>
+<%= link_to "Yo, " << current_user.name, user_path(current_user.name), remote: true, class: "menu"%>
+
+<div class="glyphicon glyphicon-log-out"> </div>
+<%= link_to "Fuck this, I'm out", signout_path, method: :delete, class: "menu"%>
+
+<% else %>
+
+<div class="glyphicon glyphicon-log-in"> </div>
+ <%=link_to "Information in, Bitches Out", sessions_path, class: "menu"%> 
+
+<% end %>
+
+</div>
+
+
+</div>
+</nav>
+
+<div id="container">
+<%= yield %>
+</div>
+<div id="footer">
+</div>
+
+</body>
+</html>

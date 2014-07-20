@@ -1,0 +1,3 @@
+$('#messages').html('<%= escape_javascript(render partial: "chats/messages", locals: { chat: @chat} ) %>')
+$('#message-field').val('')
+$('#messages').scrollTop(20);

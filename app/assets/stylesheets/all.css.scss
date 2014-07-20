@@ -1,0 +1,149 @@
+@import "bootstrap_config.scss";
+.dark-link{
+	color: $color-link-dark;
+}
+
+.dark-link:hover{
+	color: $color-link-dark-hover;
+}
+
+.link{
+	color: $color-link;
+}
+
+.link:hover{
+	color: $color-link-hover
+}
+
+#navbar {
+	background-color: $navbar-bg;
+	position:absolute;
+	height:40px;
+}
+
+.navbar-content {
+	position:absolute;
+	text-align:left;
+	width:100%;
+	height:100%;
+}
+
+.title{
+	position:absolute;
+	top:3px;
+	height:100%;
+	font-size:20pt;
+	color: $color-link-dark;
+	padding-left:10px;
+	padding-right:10px;
+	display:inline;
+
+}
+
+.subtitle {
+	font-size:30px;
+	color: $color-link-dark;
+	text-align:center;
+}
+
+
+#links{
+	position:absolute;
+	left:175px;
+	top:0px;
+	height:50px;
+	padding-top:13px;
+	display:inline;
+	white-space: nowrap;
+}
+
+.menu {
+	position:relative;	
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+	color:$color-link-dark;
+}
+
+.menu:hover {
+    -webkit-animation: menu 0.5s; /* Chrome, Safari, Opera */
+    animation: menu 0.5s;
+    background-color:$color-primary;
+   	color:$color-link-dark-hover;
+   	height:100%;
+}
+
+@-webkit-keyframes menu {
+    from {background: $color-secondary;}
+    to {background: $color-primary;}
+}
+/* Standard syntax */
+@keyframes menu {
+    from {background: $color-secondary;}
+    to {background: $color-primary;}
+}
+
+.separator{
+	background-color:$color-link-dark;
+	height:1px;
+	max-width:60%;
+	margin:auto;
+}
+
+.separator-wide{
+	background-color:$color-link-dark;
+	height:1px;
+	max-width:100%;
+	margin:auto;
+}
+
+.separator-increased-margins{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.separator-vertical{
+	width:1px;
+	height:60%;
+	margin:auto;
+	background-color:$color-link-dark;
+	display:inline-block;
+}
+
+.separator-vertical-tall{
+	width:1px;
+	height:100%;
+	margin:auto;
+	background-color:$color-link-dark;
+	display:inline-block;
+}
+
+.centered {
+	text-align:center;
+}
+
+.inline {
+	display:inline-block;
+}
+
+.title-bar {
+	background-color:$color-link;
+	width:100%
+}
+
+#submit {
+	margin-top:10px;
+}
+
+.backdrop{
+
+	min-height:400px;
+	background-color:$color-secondary;
+	margin:auto;
+}
+
+.unbold {
+	font-weight:normal !important;
+}
+

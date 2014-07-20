@@ -1,0 +1,32 @@
+$body-bg: #FFE8B3;
+
+$color-primary: #FFE8B3;
+$color-secondary: #EEE;
+$color-topbar: #C97C00;
+
+$navbar-bg: $color-secondary;
+$navbar-text: #EB5A50;
+
+
+$color-border: #CCC;
+$padding-base: 8px;
+$margin-base: 8px;
+
+$border-radius-base:	3px;
+$border-radius-large:	$border-radius-base * 3;
+$border-radius-medium:	$border-radius-base * 2;
+$border-radius-small:	$border-radius-base;
+
+@import "bootstrap";
+
+#container {
+	max-width:800px;
+	margin: auto;
+	margin-top:85px;
+	min-height:100%;
+}
+
+$color-link: #d9534f;
+$color-link-hover: #c9302c;
+$color-link-dark: $text-color;
+$color-link-dark-hover: lighten($text-color, 20%);

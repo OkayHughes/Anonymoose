@@ -1,0 +1,55 @@
+<div class="backdrop" id="new-chat-backdrop">
+
+<strong> New Chat: </strong>
+
+<%= form_for(@chat, class: "form") do |f| %>
+  <% if @chat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chat.errors.count, "error") %> prohibited this chat from being saved:</h2>
+
+      <ul>
+      <% @chat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="centered">
+
+  <div id="friends_div">
+
+  <div id="friend-label">
+  Add Friends:
+  </div>
+
+  <% current_user.friends.each do |f| %>
+    <div class="separator"></div>
+    <div class="click" onclick="reshade('friend_<%=f.name%>'); toggle('<%=f.name%>')">
+    <div class="friend" id="friend_<%=f.name %>">
+    <div class="hide">
+    <%= check_box_tag(f.name) %>
+    </div>
+    <%= label_tag(f.name, f.name, class:"unbold friend-label")%><br> 
+    </div>
+    </div>
+  <% end %>
+
+
+
+  </div>
+  
+
+
+  <div class="separator-wide" id="chat-separator"></div>
+  <%= check_box_tag(:random) %>
+  <%= label_tag(:random, "Include random users?", class:"unbold inline") %><br> 
+  <%= number_field(:amount, nil, in: 1..10, step: 1, id:"number") %><br>
+  <%= f.submit "Create Chat", class:"btn btn-danger", id:"submit" %>
+
+  </div>
+
+<% end %>
+
+
+</div>

@@ -1,0 +1,20 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap_config.scss";
+
+
+
+.user_profile_bar {
+	display:inline-block;
+	background-color: $color-secondary;
+	text-align: center;
+	margin:auto;
+}
+
+.null-button {
+	color: $color-link-dark;
+}
+.null-button:hover{
+	color: $color-link-dark-hover;
+}

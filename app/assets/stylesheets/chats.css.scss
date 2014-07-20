@@ -1,0 +1,83 @@
+// Place all the styles related to the chats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap_config.scss";
+
+
+
+
+#new-chat-backdrop{
+	padding-bottom:10px;
+	display:inline-block;
+}
+
+.friend {
+	color:$color-link-dark;
+	width:60%;
+	margin:auto;
+	position:relative;
+	z-index:-1;	
+}
+
+.friend-label{
+	position:relative;
+	width:60%;
+	z-index:-1;
+}
+
+#friend-label{
+	display:inline-block;
+}
+
+.click {
+	position:relative;
+	z-index:10;
+	margin:auto;
+}
+
+
+#chat-separator{
+	clear:both;
+}
+
+#chats-list{
+	width:30%;
+	padding:5px;
+	overflow-y:auto;
+	max-height:350px;
+	display:inline-block;
+	float:left;
+}
+
+#action-div{
+	width: 70%;
+	height:100px;
+	display:inline-block;
+	margin:auto;
+    min-height:350px;
+}
+
+#messages-container{
+	width:70%;
+	display:inline-block;
+
+}
+.chat-link{
+	background-color: $color-secondary;
+	text-align:center;
+	height:35px;
+}
+
+.chat-list-heading{	
+	background-color:$color-primary;
+}
+
+.chat-list-message{
+	text-align:center
+}
+
+.message{
+	margin-left:20px;
+	overflow-y:auto;
+	
+}

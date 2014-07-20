@@ -1,0 +1,18 @@
+
+<strong>
+<% @chat.users.each do |u| %>
+	<%= u.name << ", " %>
+<% end %>
+</strong>
+<div id="messages-container">
+<div class="separator-wide separator-increased-margins"></div>
+<div id="messages">
+<%= render partial: "messages", locals: {chat: @chat} %>
+</div>
+<%= form_for(@message, remote: true, class:"form") do |f| %>
+
+<%= f.text_field :content, class:"form-control inline", id: "message-field" %>
+<%= f.hidden_field :chat_id, value: @chat.id %>
+<%= f.submit class:"btn btn-danger pull-right inline"%>
+<% end %>
+</div>

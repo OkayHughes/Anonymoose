@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div class="user_profile_bar backdrop">
+
+	<strong><%= @user.name %> </strong>
+
+	<br>
+	<% if @user == current_user %>
+	<%= link_to 'Edit yo shit', edit_user_path(@user), class: "dark-link" %>
+	<% else %>
+	<% if signed_in? %>
+	<%= link_to 'Friend this bitch', friendships_path(@user.name), class: "dark-link", method: "post" %>
+	<% end %>
+	<% end %>
+	<br><strong>Friends:</strong><br>
+
+	<div class="separator"></div>
+	<% @user.friends.each do |f| %>
+		<%= link_to f.name, user_path(f.name), class: "dark-link", remote: true %><br>
+		<div class="separator"></div>
+	<% end %>
+</div>

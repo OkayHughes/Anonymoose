@@ -1,0 +1,40 @@
+<div class="backdrop">
+<div class="title-bar"> <div class="subtitle"> Chats: </div> </div>
+<div id="chats-list">
+<div class="centered"> <strong>Your Chats:</strong></div>
+<div class="separator-wide separator-increased-margins"></div>
+<% @chats.each do |c| %>
+	<%= link_to(chat_path(c.id), remote: true) do %>
+	<div class="chat-link">
+	<div class="chat-list-heading">
+	Members:
+	<% c.users[1..3].each do |f| %>
+		<%= f.name << ", " %>
+	<% end %>
+	</div>
+	<div class="chat-list-message">
+	<% if c.messages.count != 0 %>
+		<%= c.messages.first.content %>
+	<% else %>
+	Chat Empty...
+	<% end %>
+
+	</div>
+	
+	</div>
+	
+	<% end %>
+
+	<div class="separator-wide separator-increased-margins"></div>
+<% end %>
+</div>
+<div class="centered">
+<div id="action_div">
+<% if @chat.id %>
+<%= render partial: "show" %>
+<% else %>
+<%= render partial: 'new'%>
+<% end %>
+</div>
+</div>
+</div>
