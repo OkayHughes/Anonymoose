@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { 
           sign_in @user          
-          redirect_to user_path(@user.name), notice: 'User was successfully created.'
+          redirect_to root_url, notice: 'User was successfully created.'
         }
         format.json { render action: 'show', status: :created, location: @user }
       else
